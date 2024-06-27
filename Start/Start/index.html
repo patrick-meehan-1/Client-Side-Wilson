@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA 2</title>
+
+    <!-- Link to Bootstrap Stylesheet-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Link to My Stylesheet-->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section id="flightManagement">
+
+            <h3 id="formHeading">Flight Booking System</h3>
+
+            <form id="flightBookingForm" class="p-2">
+
+                <div class="mb-4">
+                    <label for="custNumber" class="form-label">Customer Number</label>
+                    <input type="number" id="custNumber" class="form-control" value="12345">
+                </div>
+
+                <div class="mb-4">
+                    <label for="flightType" class="form-label">Flight Type</label>
+                    <select id="flightType" class="form-select">
+                        <option value="None" selected>Choose Flight Type</option>
+                        <option value="Domestic">Domestic</option>
+                        <option value="EU">EU</option>
+                        <option value="Transatlantic">Transatlantic</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="bagWeight" class="form-label">Bag weight</label>
+                    <input type="number" id="bagWeight" class="form-control" value="17">
+                </div>
+
+                <div class="mb-4">
+                    <label for="amount" class="form-label">Amount to be paid</label>
+                    <input type="number" id="amount" class="form-control" value="25">
+                </div>
+
+                <div class="p-2">
+                    <button onclick="makeBooking()" class="btn btn-primary" type="button" id="bookingButton">Make Booking</button>
+                    <button class="btn btn-success" type="button" id="summaryReportButton">Summary Report</button>
+                    <button class="btn btn-dark" type="button" id="detailedReportButton">Detailed Report</button>
+                    <button class="btn btn-warning" type="button" id="randomButton">Random</button>
+                </div>
+            </form>
+
+        </section>
+
+        <section id="reports">
+            <div id="summaryReport"></div>
+            <div class="row">
+                <div class="col-4" id="DomesticReport"></div>
+                <div class="col-4" id="EUReport"></div>
+                <div class="col-4" id="TransatlanticReport"></div>
+            </div>
+        </section>
+
+    </div>
+    <!-- End of div container-->
+
+    <!-- Link to My JavaScript file -->
+    <script src="scripts/myScripts.js"></script>
+
+    <!-- Link to Bootstrap JS file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
