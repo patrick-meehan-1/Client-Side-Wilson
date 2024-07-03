@@ -52,8 +52,8 @@
 
                 <div class="p-2">
                     <button onclick="makeBooking()" class="btn btn-primary" type="button" id="bookingButton">Make Booking</button>
-                    <button class="btn btn-success" type="button" id="summaryReportButton">Summary Report</button>
-                    <button class="btn btn-dark" type="button" id="detailedReportButton">Detailed Report</button>
+                    <button onclick="summary()" class="btn btn-success" type="button" id="summaryReportButton">Summary Report</button>
+                    <button onclick="detailedReport()" class="btn btn-dark" type="button" id="detailedReportButton">Detailed Report</button>
                     <button class="btn btn-warning" type="button" id="randomButton">Random</button>
                 </div>
             </form>
@@ -61,7 +61,7 @@
         </section>
 
         <section id="reports">
-            <div id="summaryReport"></div>
+            <div id="summaryReport"> </div>
             <div class="row">
                 <div class="col-4" id="DomesticReport"></div>
                 <div class="col-4" id="EUReport"></div>
