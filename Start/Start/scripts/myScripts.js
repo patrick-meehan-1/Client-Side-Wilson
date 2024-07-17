@@ -44,7 +44,7 @@ function makeBooking() {
         alert("Your booking has been successfully created!");
 
         /*
-        Q1. Part D - Save Booking to list
+        Q1. Part D - Checking overall weight
     */
 
         if (totalWeight > 60) {
@@ -135,4 +135,24 @@ function detailedReport() {
     <p>Total amount paid: ${totalTransatlanticPrice}</p>
     `;
 
+}
+
+// PICKS A random flight and changes border style
+
+
+function randomSelection() {
+    let flighttypes = ["Domestic", "Translantic", "EU"];
+    let randomFlightType = flighttypes[Math.floor(Math.random() * flighttypes.length)];
+
+    document.getElementById("DomesticReport").style.border = "";
+    document.getElementById("TransatlanticReport").style.border = "";
+    document.getElementById("EUReport").style.border = "";
+
+    if (randomFlightType === "Domestic") {
+        document.getElementById("DomesticReport").style.border = "3px blue solid";
+    } else if (randomFlightType === "Translantic") {
+        document.getElementById("TransatlanticReport").style.border = "3px blue solid";
+    } else if (randomFlightType === "EU") {
+        document.getElementById("EUReport").style.border = "3px blue solid";
+    }
 }
